@@ -15,7 +15,7 @@ export default BoboHeaderLogo
 
 const styles = StyleSheet.create({
     headerLogo: {
-        height: 48
+        height: 43
     }
 })
 
