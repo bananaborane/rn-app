@@ -12,12 +12,12 @@ export default function App() {
 
 
  
-       <Header
+       {/* <Header
    centerComponent={<BoboHeaderLogo/>}
    containerStyle={{
      backgroundColor: '#fc7d44'
    }}
-      />
+      /> */}
 
 
 

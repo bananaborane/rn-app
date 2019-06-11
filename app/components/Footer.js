@@ -50,5 +50,9 @@ const styles = StyleSheet.create({
     },
     eachIconText: {
         color: '#80868b'
-    }
+    },
+    footer: {
+        // position: 'fixed',
+        // bottom: 0
+      }
 })

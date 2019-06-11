@@ -18,7 +18,7 @@ export class Main extends React.Component {
             <ScrollView style={{ width: '100%' }}>
                 <StatusBar barStyle="light-content" />
                 <View style={{ width: '100%' }}>
-                    <Image style={{ width: '100%' }} source={require('./../images/kogiblackjackquesadilla.jpg')} />
+                    <Image style={{ width: '100%' }} source={require('./../images/kogiblackjackquesadilla1.jpg')} />
                     <TextInput style={{ paddingLeft: 20 }} placeholder="Search for tacos, burgers and barbers" multiline={true} autoCapitalize="sentences" underlineColorAndroid="transparent" />
                 </View>
             </ScrollView>
