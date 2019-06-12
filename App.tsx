@@ -8,7 +8,7 @@ import Search from './app/components/Search.js'
 import More from './app/components/More.js'
 import Collections from './app/components/Collections.js'
 import Profile from './app/components/Profile.js'
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 
 export default class App extends Component {
   render(){
@@ -75,17 +75,21 @@ export default class App extends Component {
 //   return <IconWithBadge {...props} badgeCount={3} />;
 // };
 
-// const getTabBarIcon = (navigation, focused, tintColor) => {
-//   const { routeName } = navigation.state;
-//   let IconComponent = Ionicons;
-//   let iconName;
-//   if (routeName === 'Home') {
-//     iconName = `ios-information-circle${focused ? '' : '-outline'}`;
-//     // We want to add badges to home tab icon
-//     IconComponent = HomeIconWithBadge;
-//   } else if (routeName === 'Settings') {
-//     iconName = `ios-options${focused ? '' : '-outline'}`;
-//   }
+const getTabBarIcon = (navigation, focused, tintColor) => {
+  const { routeName } = navigation.state;
+  let IconComponent = Ionicons;
+  let iconName;
+  if (routeName === 'Search') {
+    iconName = `search`;
+  } else if (routeName === 'Profile') {
+    iconName = `account-circle`;
+  } else if (routeName === 'Collections') {
+    iconName = `collections`
+  } else if (routeName === 'More') {
+    iconName = `menu`
+  }
+  return <MaterialIcons name={iconName} size={27} color={tintColor} />
+}
 
 const DashboardTabNavigator = createBottomTabNavigator({
   Search,
@@ -93,16 +97,21 @@ const DashboardTabNavigator = createBottomTabNavigator({
   Collections,
   More
 },
-// {
-//   defaultNavigationOptions: ({ navigation }) => ({
-//     tabBarIcon: ({ focused, tintColor }) =>
-//       getTabBarIcon(navigation, focused, tintColor),
-//   }),
-//   tabBarOptions: {
-//     activeTintColor: 'tomato',
-//     inactiveTintColor: 'gray',
-//   },
-// }
+{
+  defaultNavigationOptions: ({ navigation }) => ({
+    tabBarIcon: ({ focused, tintColor }) =>
+      getTabBarIcon(navigation, focused, tintColor),
+  }),
+  tabBarOptions: {
+    activeTintColor: '#0076BA',
+    inactiveTintColor: 'gray',
+    style: {
+      backgroundColor: '#eff0f1',
+      borderTopColor: 'gray',
+      borderTopWidth: 1
+    }
+  },
+}
 )
 
 
@@ -111,7 +120,7 @@ const AppSwitchNavigator = createSwitchNavigator({
   Welcome: { screen: DashboardTabNavigator }
 })
 
-const AppContainer = createAppContainer(AppSwitchNavigator);
+const AppContainer = createAppContainer(AppSwitchNavigator)
 
 
 const styles = StyleSheet.create({
@@ -121,4 +130,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
+
+
+
