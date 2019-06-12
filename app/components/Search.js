@@ -23,7 +23,7 @@ export class Search extends React.Component {
                 <View style={{ width: '100%' }}>
                     <Image style={styles.backgroundImage} source={require('./../images/kogiblackjackquesadilla1.jpg')} >
                         {/* <Text>INSIDE IMAGE TAGS</Text> */}
-                    </Image>
+                    </Image>    
                 </View>
                 <View>
                     <View style={styles.stickyInputContainer}>
