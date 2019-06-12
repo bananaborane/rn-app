@@ -49,10 +49,16 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     eachIconText: {
-        color: '#80868b'
+        color: '#80868b',
+        fontWeight: "100"
     },
     footer: {
         // position: 'fixed',
         // bottom: 0
       }
 })
+
+
+
+
+

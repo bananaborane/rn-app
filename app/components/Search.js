@@ -12,11 +12,13 @@ import {
     ImageBackground
 } from 'react-native';
 import { LinearGradient } from 'expo';
+import Footer from './Footer'
 
-export class Main extends React.Component {
+export class Search extends React.Component {
     render() {
         return (
             <ScrollView stickyHeaderIndices={[1]} style={{ width: '100%' }}>
+                {/* <Footer /> */}
                 <View style={{ width: '100%' }}>
                     <Image style={styles.backgroundImage} source={require('./../images/kogiblackjackquesadilla1.jpg')} >
                         {/* <Text>INSIDE IMAGE TAGS</Text> */}
@@ -39,7 +41,7 @@ export class Main extends React.Component {
     }
 }
 
-export default Main
+export default Search
 
 const styles = StyleSheet.create({
     stickyInput: {
