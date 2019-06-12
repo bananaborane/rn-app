@@ -1,6 +1,8 @@
-export const boboOrange = '#fc7d44';
-export const boboWhite = '#FEFEFE';
+export const boboOrange = '#fc7d44'; // OR #F7941E
+export const boboWhite = '#FEFEFE'; // OR #FAFAFA
+export const boboBlack = '#404040'
 export const boboGold = '#FDE175';
+export const boboBlue = '#0076BA'
 export const lightWhite = '#fcefe9';
 export const lighterWhite = '#f4e4e2';
 export const circleInactive = '#ecbfbe';

@@ -8,18 +8,31 @@ import {
 	ScrollView,
     AsyncStorage,
     TextInput,
-    Image
+    Image,
+    ImageBackground
 } from 'react-native';
 import { LinearGradient } from 'expo';
 
 export class Main extends React.Component {
     render() {
         return (
-            <ScrollView style={{ width: '100%' }}>
-                <StatusBar barStyle="light-content" />
+            <ScrollView stickyHeaderIndices={[1]} style={{ width: '100%' }}>
                 <View style={{ width: '100%' }}>
-                    <Image style={{ width: '100%' }} source={require('./../images/kogiblackjackquesadilla1.jpg')} />
-                    <TextInput style={{ paddingLeft: 20 }} placeholder="Search for tacos, burgers and barbers" multiline={true} autoCapitalize="sentences" underlineColorAndroid="transparent" />
+                    <Image style={styles.backgroundImage} source={require('./../images/kogiblackjackquesadilla1.jpg')} >
+                        {/* <Text>INSIDE IMAGE TAGS</Text> */}
+                    </Image>
+                </View>
+                <View>
+                    <View style={styles.stickyInputContainer}>
+                        <TextInput style={styles.stickyInput} placeholder="Search for tacos, burgers and barbers" multiline={true} autoCapitalize="sentences" underlineColorAndroid="transparent" />
+                    </View>
+                </View>
+                <View>
+                    <Image style={styles.backgroundImage} source={require('./../images/kogiblackjackquesadilla1.jpg')} />
+                    <Image style={styles.backgroundImage} source={require('./../images/kogiblackjackquesadilla1.jpg')} />
+                    <Image style={styles.backgroundImage} source={require('./../images/kogiblackjackquesadilla1.jpg')} />
+                    <Image style={styles.backgroundImage} source={require('./../images/kogiblackjackquesadilla1.jpg')} />
+                    <Image style={styles.backgroundImage} source={require('./../images/kogiblackjackquesadilla1.jpg')} />
                 </View>
             </ScrollView>
         )
@@ -27,4 +40,26 @@ export class Main extends React.Component {
 }
 
 export default Main
+
+const styles = StyleSheet.create({
+    stickyInput: {
+        paddingLeft: 20,
+        borderStyle: 'solid',
+        borderColor: '#F7941E',
+        borderWidth: 2,
+        backgroundColor: 'white'
+    },
+    stickyInputContainer: {
+        paddingTop: 30,
+        paddingBottom: 10,
+        backgroundColor: '#F7941E'
+    },
+    insideImageText: {
+
+    },
+    backgroundImage: {
+        width: '100%'
+    }
+})
+
 

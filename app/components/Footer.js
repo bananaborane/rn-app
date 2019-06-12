@@ -10,10 +10,10 @@ function Footer() {
                 <MaterialIcons name="search" size={24} color='#80868b' />
                 <Text style={styles.eachIconText}>Search</Text>
             </View>
-            <View style={styles.eachIcon}>
+            {/* <View style={styles.eachIcon}>
                 <Feather name="activity" size={24} color='#80868b' />
                 <Text style={styles.eachIconText}>Activity</Text>
-            </View>
+            </View> */}
             <View style={styles.eachIcon}>
                 <MaterialIcons name="account-circle" size={24} color='#80868b' />
                 <Text style={styles.eachIconText}>Profile</Text>

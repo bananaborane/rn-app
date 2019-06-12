@@ -8,7 +8,7 @@ import Footer from './app/components/Footer.js'
 export default function App() {
   return (
     <View style={styles.container}>
-      
+                      <StatusBar barStyle="light-content" />
 
 
  
